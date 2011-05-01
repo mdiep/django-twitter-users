@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 import os, re
 
 PKG="twitter_users"
-verstr="0.1"
+verstr="0.1.1"
 
 setup(name=PKG,
       version=verstr,
