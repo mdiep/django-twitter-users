@@ -69,7 +69,7 @@ def twitter_logout(request, redirect_field_name='next'):
         redirect_to = request.REQUEST.get(redirect_field_name, None)
         if not redirect_to or not is_safe_redirect(redirect_to):
             try:
-                redirect_to = reverse(settings.LOGOUT_REDIRECT_VIEW, [request.user.id])
+                redirect_to = reverse(settings.LOGOUT_REDIRECT_VIEW, args=[request.user.id])
             except NoReverseMatch:
                 redirect_to = settings.LOGOUT_REDIRECT_URL
         
